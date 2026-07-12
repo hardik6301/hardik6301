@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Publish hardik6301 profile + create/push portfolio and dsa-java.
-# Requires auth as GitHub user hardik6301 (SSH or gh).
+# Requires auth as GitHub user hardik6301 (SSH host alias recommended).
 set -euo pipefail
 
 PROFILE_DIR="${PROFILE_DIR:-/Users/hardik/Desktop/hardik6301}"
 PORTFOLIO_DIR="${PORTFOLIO_DIR:-/Users/hardik/Desktop/portfolio}"
 DSA_DIR="${DSA_DIR:-/Users/hardik/Desktop/dsa-java}"
 GH_USER="hardik6301"
+SSH_HOST="${SSH_HOST:-github.com-hardik6301}"
 export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -o StrictHostKeyChecking=accept-new}"
 
 die() { echo "error: $*" >&2; exit 1; }
@@ -16,7 +17,7 @@ require_dir() {
 }
 
 echo "==> Checking SSH identity (must be ${GH_USER})"
-ssh_out="$(ssh -T git@github.com 2>&1 || true)"
+ssh_out="$(ssh -T "git@${SSH_HOST}" 2>&1 || true)"
 echo "$ssh_out"
 if echo "$ssh_out" | grep -qi "Hi ${GH_USER}!"; then
   echo "SSH OK as ${GH_USER}"
@@ -32,7 +33,7 @@ require_dir "$DSA_DIR"
 
 echo ""
 echo "==> Pushing profile: ${GH_USER}/${GH_USER}"
-git -C "$PROFILE_DIR" push "git@github.com:${GH_USER}/${GH_USER}.git" main
+git -C "$PROFILE_DIR" push "git@${SSH_HOST}:${GH_USER}/${GH_USER}.git" main
 echo "Profile: https://github.com/${GH_USER}/${GH_USER}"
 
 create_and_push() {
@@ -47,7 +48,7 @@ create_and_push() {
     if gh repo view "${GH_USER}/${name}" >/dev/null 2>&1; then
       echo "Repo already exists: ${url}"
       git -C "$dir" remote remove origin 2>/dev/null || true
-      git -C "$dir" remote add origin "git@github.com:${GH_USER}/${name}.git"
+      git -C "$dir" remote add origin "git@${SSH_HOST}:${GH_USER}/${name}.git"
       git -C "$dir" push -u origin main
     else
       gh repo create "${GH_USER}/${name}" --public --source="$dir" --remote=origin --push
@@ -61,12 +62,11 @@ create_and_push() {
     echo ""
     echo "  # 2) Push:"
     echo "  git -C ${dir} remote remove origin 2>/dev/null || true"
-    echo "  git -C ${dir} remote add origin git@github.com:${GH_USER}/${name}.git"
+    echo "  git -C ${dir} remote add origin git@${SSH_HOST}:${GH_USER}/${name}.git"
     echo "  git -C ${dir} push -u origin main"
     echo ""
-    # Attempt push in case the empty repo already exists
     git -C "$dir" remote remove origin 2>/dev/null || true
-    git -C "$dir" remote add origin "git@github.com:${GH_USER}/${name}.git"
+    git -C "$dir" remote add origin "git@${SSH_HOST}:${GH_USER}/${name}.git"
     if git -C "$dir" push -u origin main; then
       echo "Pushed ${name}: ${url}"
     else
