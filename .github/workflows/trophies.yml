@@ -1,0 +1,35 @@
+name: Generate Trophies
+
+on:
+  schedule:
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  trophies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download trophy SVG
+        run: |
+          mkdir -p assets
+          curl -fsSL \
+            "https://github-profile-trophy-tawny.vercel.app/?username=${{ github.repository_owner }}&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15" \
+            -o assets/trophies.svg
+          # Fail the job if we got an HTML/error page instead of SVG
+          head -c 120 assets/trophies.svg | grep -q "<svg"
+
+      - name: Commit trophies
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh GitHub trophies"
+          file_pattern: assets/trophies.svg
