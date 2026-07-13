@@ -8,9 +8,9 @@
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Computer%20Science-Chitkara%20University-6C63FF?style=for-the-badge&logo=academia&logoColor=white"/>
-<img src="https://img.shields.io/badge/CGPA-8.30-7C3AED?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Punjab-India-4F46E5?style=for-the-badge&logo=googlemaps&logoColor=white"/>
+<img src="https://img.shields.io/badge/B.E.%20CSE-Chitkara%20University-6C63FF?style=for-the-badge&logo=academia&logoColor=white"/>
+<img src="https://img.shields.io/badge/Percentage-82.70%25-7C3AED?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Nabha-Punjab%2C%20India-4F46E5?style=for-the-badge&logo=googlemaps&logoColor=white"/>
 
 <br><br>
 
@@ -39,11 +39,11 @@
 
 ## About
 
-Software Engineering undergraduate at **Chitkara University (CGPA 8.30)** focused on building production-grade systems across **AI, full-stack, and mobile**.
+Computer Science undergraduate at **Chitkara University (B.E. CSE · 82.70%)** with enterprise internship experience at **Infosys**, where I built iOS modules for a Learning & Training Management System in an Agile environment.
 
-I engineer products end-to-end — from architecture and APIs to secure auth, payments, and deployment. My work spans enterprise iOS at **Infosys**, AI SaaS platforms, and App Store–published mobile applications.
+I work across **full-stack, mobile, and AI integration** — including a live AI travel SaaS (**Travora**) with Gemini-powered itineraries, secure auth, and Razorpay payments, and **ClubHub**, a campus management app published on the Apple App Store.
 
-I care about clean architecture, measurable impact, and shipping systems that are reliable under real users.
+I focus on clean architecture, OOP, scalable systems, and shipping products that solve real problems.
 
 ### Open To
 
@@ -61,19 +61,19 @@ I care about clean architecture, measurable impact, and shipping systems that ar
 
 ### Languages
 
-<img src="https://skillicons.dev/icons?i=java,js,ts,swift,dart,python,cpp,c,mysql"/>
+<img src="https://skillicons.dev/icons?i=java,js,ts,swift,dart"/>
 
 ### Frontend
 
-<img src="https://skillicons.dev/icons?i=react,nextjs,flutter,tailwind,html,css,figma"/>
+<img src="https://skillicons.dev/icons?i=react,nextjs,flutter,html,css,figma"/>
 
 ### Backend & Databases
 
-<img src="https://skillicons.dev/icons?i=nodejs,spring,express,postgres,prisma,supabase,firebase"/>
+<img src="https://skillicons.dev/icons?i=nodejs,express,postgres,supabase"/>
 
 ### Cloud, DevOps & Tooling
 
-<img src="https://skillicons.dev/icons?i=aws,docker,vercel,linux,git,github,vscode,postman"/>
+<img src="https://skillicons.dev/icons?i=vercel,git,github,vscode,postman"/>
 
 </div>
 
@@ -85,12 +85,12 @@ I care about clean architecture, measurable impact, and shipping systems that ar
 
 | Domain | Proficiency | Details |
 |:-------|:-----------:|:--------|
-| Large Language Models | ★★★★★ | Gemini API integrations, structured outputs, production AI workflows |
-| Retrieval-Augmented Generation | ★★★★★ | LangChain + Pinecone pipelines for grounded, citation-aware Q&A |
-| Prompt Engineering | ★★★★★ | Deterministic prompting for reliable, product-ready AI behavior |
-| Semantic Search | ★★★★☆ | Vector embeddings for high-quality document retrieval |
-| AI SaaS Development | ★★★★★ | End-to-end AI products with Next.js, Supabase, and payments |
-| Auth & Security for AI Apps | ★★★★☆ | JWT sessions, RLS policies, server-enforced access control |
+| Large Language Models | ★★★★★ | Google Gemini API for structured itineraries and AI product features |
+| Prompt Engineering | ★★★★★ | Structured prompts for reliable, product-ready AI behavior in Travora |
+| AI SaaS Development | ★★★★★ | Live AI products with Next.js, Supabase, PostgreSQL, and Razorpay |
+| Retrieval-Augmented Generation | ★★★★☆ | Building DocBot with LangChain + Pinecone for grounded document Q&A |
+| Semantic Search | ★★★★☆ | Vector embeddings and retrieval for context-aware answers (in progress) |
+| Auth & Security for AI Apps | ★★★★☆ | JWT sessions, Supabase RLS, and server-enforced access control |
 
 </div>
 
@@ -102,18 +102,19 @@ I care about clean architecture, measurable impact, and shipping systems that ar
 <summary><b>Travora — AI Travel Planning SaaS</b></summary>
 <br>
 
-Production AI travel platform that turns natural language prompts into complete itineraries, with freemium monetization, secure payments, and persistent trip storage.
+Live full-stack AI travel SaaS that generates personalized day-wise itineraries with Google Gemini based on destination, budget, duration, interests, and travel style — plus an AI Chat Editor for natural-language plan edits.
 
 | Metric | Details |
 |:-------|:--------|
-| **Stack** | Next.js · React · Tailwind · Supabase · PostgreSQL · Gemini API · Razorpay · Vercel |
-| **Scale** | Multi-user SaaS with auth, subscriptions, and persistent trip data |
-| **Performance** | Dynamic itinerary updates without full page reloads |
-| **Security** | JWT auth · Supabase RLS · Razorpay HMAC verification |
-| **Impact** | End-to-end AI SaaS demonstrating product + engineering ownership |
+| **Stack** | Next.js · Gemini API · Supabase · PostgreSQL · Razorpay · Vercel |
+| **Scale** | Freemium SaaS with auth, trip storage, and Pro subscriptions |
+| **Performance** | Real-time itinerary updates from JSON without page refreshes |
+| **Security** | JWT auth · Supabase RLS · Razorpay HMAC-SHA256 verification |
+| **Impact** | Production AI SaaS with payments and end-to-end product ownership |
+| **Live** | [travora-ai-app.vercel.app](https://travora-ai-app.vercel.app/) |
 | **Repository** | [ai-trip-planner](https://github.com/hardik6301/ai-trip-planner) |
 
-Travora combines conversational AI with a real business model — freemium access, Pro upgrades, and server-side payment validation — built as a scalable full-stack product rather than a demo.
+Built Jun 2026 as a modular full-stack product focused on Generative AI, prompt engineering, secure auth, payment systems, and cloud databases.
 
 </details>
 
@@ -123,18 +124,19 @@ Travora combines conversational AI with a real business model — freemium acces
 <summary><b>ClubHub — Campus Club Management Platform</b></summary>
 <br>
 
-Cross-platform campus operations app for club administration, events, attendance, and multi-role workflows. Published on the Apple App Store.
+Production campus club & event management app (**ClubHub – Campus Connect**) for students, club executives, and administrators — published on the Apple App Store. Mentor: Sajjal Nair.
 
 | Metric | Details |
 |:-------|:--------|
-| **Stack** | SwiftUI · Flutter · Supabase · PostgreSQL · MVVM |
-| **Scale** | Multi-role platform (admins, members, event workflows) |
-| **Performance** | Supabase RPCs for efficient backend operations |
+| **Stack** | SwiftUI · Flutter · Supabase · PostgreSQL · MVVM · Cloudinary · MapKit · EventKit |
+| **Scale** | Multi-role platform with events, attendance, memberships, and announcements |
+| **Performance** | QR check-in via Supabase RPCs · Cloudinary for image upload/retrieval |
 | **Security** | PKCE authentication · role-based access control |
-| **Impact** | Production App Store release with real campus use cases |
+| **Impact** | Live App Store product with iOS → Flutter migration at feature parity |
+| **App Store** | [ClubHub – Campus Connect](https://apps.apple.com/in/app/clubhub-campus-connect/id6760576301) |
 | **Repository** | [clubhub-admin](https://github.com/hardik6301/clubhub-admin) |
 
-ClubHub was engineered for production reliability — MVVM architecture, reusable components, and a full migration path from SwiftUI to Flutter while preserving feature parity.
+Built Aug 2025 – Mar 2026 with Git-based iteration, modular mobile architecture, and a shared Supabase backend reused across iOS and Android without schema or API changes.
 
 </details>
 
@@ -144,18 +146,19 @@ ClubHub was engineered for production reliability — MVVM architecture, reusabl
 <summary><b>DocBot — RAG Document Assistant</b></summary>
 <br>
 
-AI document intelligence system that ingests PDFs/PPTs, retrieves relevant context via vector search, and answers with grounded citations.
+AI document Q&A app currently in active development — users upload PDFs, PPTs, research papers, and study materials, then ask natural-language questions answered with retrieved context instead of model memory alone.
 
 | Metric | Details |
 |:-------|:--------|
-| **Stack** | Next.js · LangChain · Gemini API · Pinecone · PostgreSQL |
-| **Scale** | Document ingestion → chunking → embeddings → retrieval pipeline |
-| **Performance** | Similarity search optimized for low-latency context selection |
-| **Security** | Controlled document access with authenticated workflows |
-| **Impact** | Production-oriented GenAI architecture with reduced hallucinations |
+| **Stack** | Next.js · Gemini API · LangChain · Pinecone · PostgreSQL |
+| **Scale** | Upload → chunk → embed → retrieve → generate (RAG pipeline) |
+| **Performance** | Semantic search over document sections for grounded answers |
+| **Security** | Application data managed with PostgreSQL (auth workflows planned) |
+| **Impact** | Hands-on GenAI build for students, researchers, and professionals |
+| **Status** | In development (started Jul 2026) |
 | **Repository** | Coming soon |
 
-DocBot focuses on retrieval-first design — chunking, embeddings, and citation-backed responses — the same patterns used in enterprise knowledge assistants.
+Planned features: multi-format upload, semantic search, context-aware Q&A, chat history, and source citations to reduce hallucinations.
 
 </details>
 
@@ -186,24 +189,23 @@ AI + cloud verification system for protecting ownership and integrity of sports 
 <tr>
 <td width="22%" align="center" valign="top">
 
-**Dec 2025 — Jan 2026**
+**29 Dec 2025 — 23 Jan 2026**
 
 </td>
 <td width="78%">
 
 ### iOS Developer Intern · Infosys Limited
-**Mysore, India**
 
-Built production modules for an enterprise Learning & Training Management System in an Agile environment — scalable UI architecture, API integration, and collaborative delivery.
+Built role-based SwiftUI modules for an enterprise Learning & Training Management System (LTMS) in an Agile team — covering courses, training schedules, enrollment, progress tracking, and role-specific workflows.
 
 **Scope**
-- Developed role-based SwiftUI modules using MVVM
-- Integrated REST APIs for courses, schedules, and progress tracking
-- Validated backend contracts and structured JSON parsing
-- Participated in sprint planning, stand-ups, and code reviews
-- Used Git + Jira across the full SDLC
+- Developed modular SwiftUI UIs using MVVM for scalable, maintainable code
+- Integrated REST APIs with JSON parsing, response validation, and error handling
+- Built reusable UI components aligned with enterprise design standards
+- Participated in sprint planning, daily stand-ups, reviews, and retrospectives
+- Used Git + Jira across requirement analysis, implementation, debugging, and code reviews
 
-`SwiftUI` `MVVM` `REST APIs` `JSON` `Git` `Jira` `Agile` `iOS` `Xcode`
+`Swift` `SwiftUI` `MVVM` `REST APIs` `JSON` `Git` `Jira` `Agile` `iOS` `Xcode` `SDLC`
 
 </td>
 </tr>
@@ -219,10 +221,10 @@ Built production modules for an enterprise Learning & Training Management System
 |:------------|:--------|
 | **1st Place Winner** | Accathon — *Ignite: Build a Unicorn* |
 | **Best Cadet Award** | National Cadet Corps |
-| **NCC A & B Certificates** | National Cadet Corps certified |
-| **App Store Release** | ClubHub published on the Apple App Store |
+| **NCC A & B Certificates** | Completed NCC A & B Certificates |
+| **App Store Release** | [ClubHub – Campus Connect](https://apps.apple.com/in/app/clubhub-campus-connect/id6760576301) |
 | **Enterprise Internship** | Infosys Limited — iOS Developer Intern |
-| **AI Product Engineering** | Multiple production AI applications shipped |
+| **GDG DevFest 2024** | Attended GDG DevFest Ludhiana (Gemini AI · Generative AI) |
 
 </div>
 
@@ -232,17 +234,9 @@ Built production modules for an enterprise Learning & Training Management System
 
 <div align="center">
 
-### AWS
-<img src="https://img.shields.io/badge/AWS-Cloud%20Foundations-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-
-### Oracle
-<img src="https://img.shields.io/badge/Oracle-Java-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
-
-### NPTEL
-<img src="https://img.shields.io/badge/NPTEL-Engineering%20Courses-5E35B1?style=for-the-badge"/>
-
-### Cisco
-<img src="https://img.shields.io/badge/Cisco-Networking-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white"/>
+### National Cadet Corps
+<img src="https://img.shields.io/badge/NCC-A%20Certificate-1B4F72?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/NCC-B%20Certificate-154360?style=for-the-badge"/>
 
 </div>
 
