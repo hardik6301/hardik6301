@@ -21,12 +21,43 @@ jobs:
 
       - name: Download trophy SVG
         run: |
+          set -euo pipefail
           mkdir -p assets
-          curl -fsSL \
-            "https://github-profile-trophy-tawny.vercel.app/?username=${{ github.repository_owner }}&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15" \
-            -o assets/trophies.svg
-          # Fail the job if we got an HTML/error page instead of SVG
-          head -c 120 assets/trophies.svg | grep -q "<svg"
+          USERNAME="${{ github.repository_owner }}"
+          QUERY="username=${USERNAME}&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15"
+
+          # Official host often returns 402; try community mirrors in order
+          MIRRORS=(
+            "https://github-profile-repo.vercel.app/?${QUERY}"
+            "https://github-profile-trophy-unserori.vercel.app/?${QUERY}"
+            "https://github-profile-trophy-tawny.vercel.app/?${QUERY}"
+            "https://github-profile-trophy.vercel.app/?${QUERY}"
+          )
+
+          ok=0
+          for url in "${MIRRORS[@]}"; do
+            echo "Trying: $url"
+            if curl -fsSL --retry 2 --retry-delay 2 -A "Mozilla/5.0" "$url" -o assets/trophies.svg; then
+              if head -c 200 assets/trophies.svg | grep -q "<svg"; then
+                echo "Downloaded trophies from: $url"
+                ok=1
+                break
+              fi
+            fi
+            echo "Mirror failed, trying next..."
+          done
+
+          if [ "$ok" -ne 1 ]; then
+            echo "All trophy mirrors failed. Keeping existing assets/trophies.svg if present."
+            if [ -f assets/trophies.svg ] && head -c 200 assets/trophies.svg | grep -q "<svg"; then
+              echo "Existing trophies.svg is still valid — not failing the job."
+              exit 0
+            fi
+            echo "No valid trophies.svg available."
+            exit 1
+          fi
+
+          wc -c assets/trophies.svg
 
       - name: Commit trophies
         uses: stefanzweifel/git-auto-commit-action@v5
