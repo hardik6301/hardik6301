@@ -88,8 +88,8 @@ I focus on clean architecture, OOP, scalable systems, and shipping products that
 | Large Language Models | ★★★★★ | Google Gemini API for structured itineraries and AI product features |
 | Prompt Engineering | ★★★★★ | Structured prompts for reliable, product-ready AI behavior in Travora |
 | AI SaaS Development | ★★★★★ | Live AI products with Next.js, Supabase, PostgreSQL, and Razorpay |
-| Retrieval-Augmented Generation | ★★★★☆ | Building DocBot with LangChain + Pinecone for grounded document Q&A |
-| Semantic Search | ★★★★☆ | Vector embeddings and retrieval for context-aware answers (in progress) |
+| Retrieval-Augmented Generation | ★★★★★ | DocBot with LangChain + Pinecone for grounded, citation-aware Q&A |
+| Semantic Search | ★★★★☆ | Vector embeddings and retrieval for context-aware document answers |
 | Auth & Security for AI Apps | ★★★★☆ | JWT sessions, Supabase RLS, and server-enforced access control |
 
 </div>
@@ -146,38 +146,19 @@ Built Aug 2025 – Mar 2026 with Git-based iteration, modular mobile architectur
 <summary><b>DocBot — RAG Document Assistant</b></summary>
 <br>
 
-AI document Q&A app currently in active development — users upload PDFs, PPTs, research papers, and study materials, then ask natural-language questions answered with retrieved context instead of model memory alone.
+AI-powered document Q&A platform that lets users upload PDFs, PPTs, Word docs, and spreadsheets, then ask natural-language questions with cited, context-aware answers via Retrieval-Augmented Generation.
 
 | Metric | Details |
 |:-------|:--------|
 | **Stack** | Next.js · Gemini API · LangChain · Pinecone · PostgreSQL |
 | **Scale** | Upload → chunk → embed → retrieve → generate (RAG pipeline) |
 | **Performance** | Semantic search over document sections for grounded answers |
-| **Security** | Application data managed with PostgreSQL (auth workflows planned) |
-| **Impact** | Hands-on GenAI build for students, researchers, and professionals |
-| **Status** | In development (started Jul 2026) |
+| **Security** | Authenticated access with application data in PostgreSQL |
+| **Impact** | Reliable document intelligence for students, researchers, and professionals |
+| **Live** | [thedocbot.vercel.app](https://thedocbot.vercel.app/) |
 | **Repository** | Coming soon |
 
-Planned features: multi-format upload, semantic search, context-aware Q&A, chat history, and source citations to reduce hallucinations.
-
-</details>
-
-<br>
-
-<details>
-<summary><b>SportShield AI — Digital Sports Media Integrity</b></summary>
-<br>
-
-AI + cloud verification system for protecting ownership and integrity of sports media against unauthorized use, tampering, and duplication.
-
-| Metric | Details |
-|:-------|:--------|
-| **Stack** | AI pipelines · Cloud verification · Media integrity workflows |
-| **Scale** | Designed for digital sports content ecosystems |
-| **Performance** | Automated verification over media assets |
-| **Security** | Ownership validation and tamper detection focus |
-| **Impact** | Applied AI for real-world media authenticity problems |
-| **Repository** | [SportShield-AI](https://github.com/hardik6301/SportShield-AI) |
+Features include multi-format upload, multi-document Q&A, source citations, chat history, and PDF export.
 
 </details>
 
