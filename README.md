@@ -276,7 +276,8 @@ Built role-based SwiftUI modules for an enterprise Learning & Training Managemen
 
 <div align="center">
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=hardik6301&theme=react-dark&hide_border=true&area=true"/>
+<!-- Official activity-graph.vercel.app returns 402; using live contribution chart instead -->
+<img width="100%" src="https://ghchart.rshah.org/7C3AED/hardik6301" alt="Hardik's GitHub contribution chart"/>
 
 </div>
 
